@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D62669220CA2B0500296BF4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669120CA2B0500296BF4 /* Query.swift */; };
+		4D62669720CA47C800296BF4 /* ConnpassAPIQueryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669620CA47C800296BF4 /* ConnpassAPIQueryKey.swift */; };
+		4D62669920CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669820CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift */; };
+		4D62669B20CA628A00296BF4 /* ConnpassAPIQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669A20CA628A00296BF4 /* ConnpassAPIQuery.swift */; };
 		9CB26F3620C971A200406592 /* ConnpassAPIStringBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB26F2C20C971A100406592 /* ConnpassAPIStringBuilder.framework */; };
 		9CB26F3B20C971A200406592 /* ConnpassAPIStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB26F3A20C971A200406592 /* ConnpassAPIStringBuilderTests.swift */; };
 		9CB26F3D20C971A200406592 /* ConnpassAPIStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,7 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D62669120CA2B0500296BF4 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		4D62669620CA47C800296BF4 /* ConnpassAPIQueryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnpassAPIQueryKey.swift; sourceTree = "<group>"; };
+		4D62669820CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnpassAPIQueryBuilder.swift; sourceTree = "<group>"; };
+		4D62669A20CA628A00296BF4 /* ConnpassAPIQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnpassAPIQuery.swift; sourceTree = "<group>"; };
 		9CB26F2C20C971A100406592 /* ConnpassAPIStringBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConnpassAPIStringBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnpassAPIStringBuilder.h; sourceTree = "<group>"; };
 		9CB26F3020C971A200406592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,12 +56,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D62669020CA279200296BF4 /* Query */ = {
+		4D62669020CA279200296BF4 /* query */ = {
 			isa = PBXGroup;
 			children = (
-				4D62669120CA2B0500296BF4 /* Query.swift */,
+				4D62669A20CA628A00296BF4 /* ConnpassAPIQuery.swift */,
+				4D62669620CA47C800296BF4 /* ConnpassAPIQueryKey.swift */,
 			);
-			path = Query;
+			path = query;
+			sourceTree = "<group>";
+		};
+		4D62669320CA3C0300296BF4 /* querybuilder */ = {
+			isa = PBXGroup;
+			children = (
+				4D62669820CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift */,
+			);
+			path = querybuilder;
 			sourceTree = "<group>";
 		};
 		9CB26F2220C971A100406592 = {
@@ -81,7 +94,8 @@
 		9CB26F2E20C971A100406592 /* ConnpassAPIStringBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				4D62669020CA279200296BF4 /* Query */,
+				4D62669320CA3C0300296BF4 /* querybuilder */,
+				4D62669020CA279200296BF4 /* query */,
 				9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */,
 				9CB26F3020C971A200406592 /* Info.plist */,
 			);
@@ -206,7 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D62669220CA2B0500296BF4 /* Query.swift in Sources */,
+				4D62669720CA47C800296BF4 /* ConnpassAPIQueryKey.swift in Sources */,
+				4D62669B20CA628A00296BF4 /* ConnpassAPIQuery.swift in Sources */,
+				4D62669920CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

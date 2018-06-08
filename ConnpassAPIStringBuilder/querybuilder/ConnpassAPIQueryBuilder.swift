@@ -14,7 +14,7 @@ public class ConnpassAPIQueryBuilder {
     
     /// イベント毎に割り当てられた番号で検索します。
     public func eventId(_ eventId: Int...) -> ConnpassAPIQueryBuilder {
-        query.event_id = eventId.map { String($0) }
+        query.event_id = eventId
         return self
     }
     
@@ -33,8 +33,8 @@ public class ConnpassAPIQueryBuilder {
     /// 指定した年月に開催されているイベントを検索します。
     public func date(_ ym: ConnpassAPIDateYM...) -> ConnpassAPIQueryBuilder {
         query.ym = ym.map {
-            let year = String(format: "%02d", $0.year)
-            let month = String(format: "%02d", $0.month)
+            let year = $0.year * 100
+            let month = $0.month
             return year + month
         }
         return self
@@ -43,9 +43,9 @@ public class ConnpassAPIQueryBuilder {
     /// 指定した年月日に開催されているイベントを検索します。
     public func date(_ ymd: ConnpassAPIDateYMD...) -> ConnpassAPIQueryBuilder {
         query.ymd = ymd.map {
-            let year = String(format: "%02d", $0.year)
-            let month = String(format: "%02d", $0.month)
-            let day = String(format: "%02d", $0.day)
+            let year = $0.year * 10000
+            let month = $0.month * 100
+            let day = $0.day
             return year + month + day
         }
         return self
@@ -65,19 +65,19 @@ public class ConnpassAPIQueryBuilder {
     
     /// グループ毎に割り当てられた番号で、ひもづいたイベントを検索します。
     public func seriesId(_ seriesId: Int...) -> ConnpassAPIQueryBuilder {
-        query.series_id = seriesId.map { String($0) }
+        query.series_id = seriesId
         return self
     }
     
     /// 検索結果の何件目から出力するかを指定します。default: 1
     public func start(_ start: Int) -> ConnpassAPIQueryBuilder {
-        query.start = String(start)
+        query.start = start
         return self
     }
         
     /// 検索結果の表示順を、更新日時順、開催日時順、新着順で指定します。default: 更新日時順
     public func order(_ order: ConnpassAPIOrder) -> ConnpassAPIQueryBuilder {
-        query.order = String(order.rawValue)
+        query.order = order.rawValue
         return self
     }
     
@@ -85,89 +85,15 @@ public class ConnpassAPIQueryBuilder {
     public func count(_ count: Int) -> ConnpassAPIQueryBuilder {
         let lowerLimit = 1
         let upperLimit = 100
-        let value = min(max(count, lowerLimit), upperLimit)
-        query.count = String(value)
+        query.count = min(max(count, lowerLimit), upperLimit)
         return self
     }
     
-    public func build() -> String {
-        var result = [String]()
-        
-        if let eventId = createQueryString(param: query.event_id, key: .event_id) {
-            result.append(eventId)
-        }
-
-        if let keyword = createQueryString(param: query.keyword, key: .keyword) {
-            result.append(keyword)
-        }
-
-        if let keywordOr = createQueryString(param: query.keyword_or, key: .keyword_or) {
-            result.append(keywordOr)
-        }
-
-        if let ym = createQueryString(param: query.ym, key: .ym) {
-            result.append(ym)
-        }
-
-        if let ymd = createQueryString(param: query.ymd, key: .ymd) {
-            result.append(ymd)
-        }
-
-        if let nickname = createQueryString(param: query.nickname, key: .nickname) {
-            result.append(nickname)
-        }
-
-        if let ownerNickname = createQueryString(param: query.owner_nickname, key: .owner_nickname) {
-            result.append(ownerNickname)
-        }
-
-        if let seriesId = createQueryString(param: query.series_id, key: .series_id) {
-            result.append(seriesId)
-        }
-
-        if let start = createQueryString(param: query.start, key: .start) {
-            result.append(start)
-        }
-
-        if let order = createQueryString(param: query.order, key: .order) {
-            result.append(order)
-        }
-
-        if let count = createQueryString(param: query.count, key: .count) {
-            result.append(count)
-        }
-
-        let queryResult = result.reduce("", {
-            let result = $0 == "" ? $0 : $0 + "&"
-            return result + $1
-        })
-        
-        if queryResult == "" {
-            return ConnpassAPIQueryBuilder.requestUrl
-        } else {
-            return ConnpassAPIQueryBuilder.requestUrl + "?" + queryResult
-        }
+    public func string() -> String {
+        return ConnpassAPIQueryStringBuilder(query: query).build()
     }
     
-    private func createQueryString(param: [String]?, key: ConnpassAPIQueryKey) -> String? {
-        guard let param = param else {
-            return nil
-        }
-        
-        return param.reduce("", { self.join(oridinal: $0, key: key, value: $1) })
-    }
-    
-    private func createQueryString(param: String?, key: ConnpassAPIQueryKey) -> String? {
-        guard let param = param else {
-            return nil
-        }
-        
-        return self.join(oridinal: "", key: key, value: param)
-    }
-
-    /// 文字列の結合。間に&を挟む。
-    private func join(oridinal: String, key: ConnpassAPIQueryKey, value: String) -> String {
-        let result = oridinal == "" ? oridinal : oridinal + "&"
-        return "\(result)\(key.rawValue)=\(value)"
+    public func dictionary() -> [String: Any] {
+        return ConnpassAPIQueryDictionaryBuilder(query: query).build()
     }
 }

@@ -14,7 +14,7 @@ struct ConnpassAPIQuery {
     /// type: 整数
     ///
     /// description: イベント毎に割り当てられた番号で検索します。複数指定可能です
-    var event_id: [String]?
+    var event_id: [Int]?
     
     /// item name: キーワード (AND)
     ///
@@ -35,14 +35,14 @@ struct ConnpassAPIQuery {
     /// type: 整数(yyyymm)
     ///
     /// description: 指定した年月に開催されているイベントを検索します。複数指定可能です
-    var ym: [String]?
+    var ym: [Int]?
     
     /// item name: イベント開催年月日
     ///
     /// type: 整数(yyyymmdd)
     ///
     /// description: 指定した年月日に開催されているイベントを検索します。複数指定可能です
-    var ymd: [String]?
+    var ymd: [Int]?
     
     /// item name: 参加者のニックネーム
     ///
@@ -63,7 +63,7 @@ struct ConnpassAPIQuery {
     /// type: 整数
     ///
     /// description: グループ 毎に割り当てられた番号で、ひもづいたイベントを検索します。複数指定可能です
-    var series_id: [String]?
+    var series_id: [Int]?
     
     /// item name: 検索の開始位置
     ///
@@ -72,7 +72,7 @@ struct ConnpassAPIQuery {
     /// description: 検索結果の何件目から出力するかを指定します。
     ///
     /// default: 1
-    var start: String?
+    var start: Int?
     
     /// item name: 検索結果の表示順
     ///
@@ -83,7 +83,7 @@ struct ConnpassAPIQuery {
     /// value: 1: 更新日時順 2: 開催日時順 3: 新着順
     ///
     /// default: 1
-    var order: String?
+    var order: Int?
     
     /// item name: 取得件数
     ///
@@ -96,7 +96,7 @@ struct ConnpassAPIQuery {
     /// min: 1
     ///
     /// max: 100
-    var count: String?
+    var count: Int?
     
     /// item name: レスポンス形式
     ///

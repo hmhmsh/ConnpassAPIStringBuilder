@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D62669220CA2B0500296BF4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669120CA2B0500296BF4 /* Query.swift */; };
 		9CB26F3620C971A200406592 /* ConnpassAPIStringBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB26F2C20C971A100406592 /* ConnpassAPIStringBuilder.framework */; };
 		9CB26F3B20C971A200406592 /* ConnpassAPIStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB26F3A20C971A200406592 /* ConnpassAPIStringBuilderTests.swift */; };
 		9CB26F3D20C971A200406592 /* ConnpassAPIStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D62669120CA2B0500296BF4 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		9CB26F2C20C971A100406592 /* ConnpassAPIStringBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConnpassAPIStringBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnpassAPIStringBuilder.h; sourceTree = "<group>"; };
 		9CB26F3020C971A200406592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D62669020CA279200296BF4 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				4D62669120CA2B0500296BF4 /* Query.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
 		9CB26F2220C971A100406592 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		9CB26F2E20C971A100406592 /* ConnpassAPIStringBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				4D62669020CA279200296BF4 /* Query */,
 				9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */,
 				9CB26F3020C971A200406592 /* Info.plist */,
 			);
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					9CB26F2B20C971A100406592 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0940;
 					};
 					9CB26F3420C971A200406592 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D62669220CA2B0500296BF4 /* Query.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +352,7 @@
 		9CB26F4120C971A200406592 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hmhmsh.ConnpassAPIStringBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +378,7 @@
 		9CB26F4220C971A200406592 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +403,7 @@
 		9CB26F4420C971A200406592 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnpassAPIStringBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +421,7 @@
 		9CB26F4520C971A200406592 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnpassAPIStringBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

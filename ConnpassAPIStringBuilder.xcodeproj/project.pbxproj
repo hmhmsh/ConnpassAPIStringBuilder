@@ -10,6 +10,15 @@
 		4D62669720CA47C800296BF4 /* ConnpassAPIQueryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669620CA47C800296BF4 /* ConnpassAPIQueryKey.swift */; };
 		4D62669920CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669820CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift */; };
 		4D62669B20CA628A00296BF4 /* ConnpassAPIQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669A20CA628A00296BF4 /* ConnpassAPIQuery.swift */; };
+		4D62669C20CA62DC00296BF4 /* ConnpassAPIQueryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669820CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift */; };
+		4D62669D20CA62DE00296BF4 /* ConnpassAPIQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669A20CA628A00296BF4 /* ConnpassAPIQuery.swift */; };
+		4D62669E20CA62E100296BF4 /* ConnpassAPIQueryKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669620CA47C800296BF4 /* ConnpassAPIQueryKey.swift */; };
+		4D6266A020CA68F300296BF4 /* ConnpassAPIDateYMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669F20CA68F300296BF4 /* ConnpassAPIDateYMD.swift */; };
+		4D6266A220CA68FB00296BF4 /* ConnpassAPIDateYM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6266A120CA68FB00296BF4 /* ConnpassAPIDateYM.swift */; };
+		4D6266A420CA692000296BF4 /* ConnpassAPIOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6266A320CA692000296BF4 /* ConnpassAPIOrder.swift */; };
+		4D6266A520CA697400296BF4 /* ConnpassAPIDateYMD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D62669F20CA68F300296BF4 /* ConnpassAPIDateYMD.swift */; };
+		4D6266A620CA697600296BF4 /* ConnpassAPIDateYM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6266A120CA68FB00296BF4 /* ConnpassAPIDateYM.swift */; };
+		4D6266A720CA697800296BF4 /* ConnpassAPIOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6266A320CA692000296BF4 /* ConnpassAPIOrder.swift */; };
 		9CB26F3620C971A200406592 /* ConnpassAPIStringBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB26F2C20C971A100406592 /* ConnpassAPIStringBuilder.framework */; };
 		9CB26F3B20C971A200406592 /* ConnpassAPIStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB26F3A20C971A200406592 /* ConnpassAPIStringBuilderTests.swift */; };
 		9CB26F3D20C971A200406592 /* ConnpassAPIStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +38,9 @@
 		4D62669620CA47C800296BF4 /* ConnpassAPIQueryKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnpassAPIQueryKey.swift; sourceTree = "<group>"; };
 		4D62669820CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnpassAPIQueryBuilder.swift; sourceTree = "<group>"; };
 		4D62669A20CA628A00296BF4 /* ConnpassAPIQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnpassAPIQuery.swift; sourceTree = "<group>"; };
+		4D62669F20CA68F300296BF4 /* ConnpassAPIDateYMD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnpassAPIDateYMD.swift; sourceTree = "<group>"; };
+		4D6266A120CA68FB00296BF4 /* ConnpassAPIDateYM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnpassAPIDateYM.swift; sourceTree = "<group>"; };
+		4D6266A320CA692000296BF4 /* ConnpassAPIOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnpassAPIOrder.swift; sourceTree = "<group>"; };
 		9CB26F2C20C971A100406592 /* ConnpassAPIStringBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConnpassAPIStringBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB26F2F20C971A100406592 /* ConnpassAPIStringBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnpassAPIStringBuilder.h; sourceTree = "<group>"; };
 		9CB26F3020C971A200406592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +81,9 @@
 			isa = PBXGroup;
 			children = (
 				4D62669820CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift */,
+				4D62669F20CA68F300296BF4 /* ConnpassAPIDateYMD.swift */,
+				4D6266A120CA68FB00296BF4 /* ConnpassAPIDateYM.swift */,
+				4D6266A320CA692000296BF4 /* ConnpassAPIOrder.swift */,
 			);
 			path = querybuilder;
 			sourceTree = "<group>";
@@ -221,7 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D62669720CA47C800296BF4 /* ConnpassAPIQueryKey.swift in Sources */,
+				4D6266A220CA68FB00296BF4 /* ConnpassAPIDateYM.swift in Sources */,
+				4D6266A420CA692000296BF4 /* ConnpassAPIOrder.swift in Sources */,
 				4D62669B20CA628A00296BF4 /* ConnpassAPIQuery.swift in Sources */,
+				4D6266A020CA68F300296BF4 /* ConnpassAPIDateYMD.swift in Sources */,
 				4D62669920CA624E00296BF4 /* ConnpassAPIQueryBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,7 +248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6266A520CA697400296BF4 /* ConnpassAPIDateYMD.swift in Sources */,
+				4D6266A620CA697600296BF4 /* ConnpassAPIDateYM.swift in Sources */,
+				4D62669C20CA62DC00296BF4 /* ConnpassAPIQueryBuilder.swift in Sources */,
 				9CB26F3B20C971A200406592 /* ConnpassAPIStringBuilderTests.swift in Sources */,
+				4D62669E20CA62E100296BF4 /* ConnpassAPIQueryKey.swift in Sources */,
+				4D6266A720CA697800296BF4 /* ConnpassAPIOrder.swift in Sources */,
+				4D62669D20CA62DE00296BF4 /* ConnpassAPIQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
